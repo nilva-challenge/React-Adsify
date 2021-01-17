@@ -26,6 +26,7 @@ So What does matter to us?
 - ability to layout page correctly
 - responsive design
 - well designed API calls
+- profound understanding of states
 - finally, ability to learn
 
 ## Tasks
