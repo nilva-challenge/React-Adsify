@@ -9,6 +9,8 @@ When clicked on each item, the user will be navigated to Video/Banner page.
 **Note** that this list should be responsive.
 
 ![image](https://camo.githubusercontent.com/ac8f7bbd3b41624b27be5a523b23a000081ba2e9c92c29119e5a6ab19dcd260a/68747470733a2f2f7075752e73682f4777504c452f336265353830313536612e706e67 "You could use this UI as sample")
+*You could use this UI as sample*
+
 2. Video/Banner page: This page shows a video or a banner based on what mode the dashboard item was. the video or banner will be retrieved from API (like [this](http://www.clipstill.com/wp-content/uploads/000055_swan_thumb.mp4?_=1)). Also a counter must shown below video/banner, which indicates how many times user has clicked on video/banner (this means you should track clicks on video/banner).
 
 ### Note
