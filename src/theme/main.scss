@@ -1,0 +1,25 @@
+$mainLight: #B1D4e0;
+$mainDark: #0c2d48;
+
+$mainLightDarkder: #2e8bc0;
+$mainDarkLighter: #145da0;
+
+.Light{
+    background-color: $mainLight;
+    color: $mainDark;;
+}
+
+.Dark{
+    background-color: $mainDark;
+    color: $mainLight;
+}
+
+.headDark{
+    background-color: $mainLightDarkder;
+    color: $mainDark;
+}
+
+.headLight{
+    background-color: $mainDarkLighter;
+    color: $mainLight;
+}
