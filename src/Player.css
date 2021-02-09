@@ -1,0 +1,41 @@
+.player {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .5);
+  z-index: 1000;
+}
+
+.player__close {
+  display: inline-block;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  width: 2em;
+  height: 2em;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.player__close::after, .player__close::before {
+  content: "";
+  width: 100%;
+  height: .3em;
+  background: #323232;
+  position: absolute;
+  top: calc(50% - .15em);
+  --rotate: 45deg;
+  transform: rotate(var(--rotate));
+}
+.player__close::before {
+  --rotate: -45deg;
+}
+
+.player__video {
+  width: 90%;
+  height: auto;
+}
