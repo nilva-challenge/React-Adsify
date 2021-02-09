@@ -1,0 +1,12 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 8rem;
+  padding-right: 3rem;
+  font-size: 1.5rem;
+  background: #6986fd;
+  color: #323232;
+  border-bottom: 2px solid rgba(255, 255, 255, .4);
+}

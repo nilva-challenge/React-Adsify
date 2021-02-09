@@ -41,3 +41,14 @@ So What does matter to us?
 7. Enjoy
 
 **Finally** don't be afraid to ask anything from us.
+
+
+### my roadmap for developing this project
+1. break down the entire project to component
+  - navigation bar
+  - header
+  - main content (list of items)
+2. create a very basic and static file structure and component
+3. add eventHandlers and some more basic interactitvities
+4. working on state and declaring the structrue for that
+5. add api calls and final steps on interacivity
