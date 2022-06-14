@@ -14,7 +14,14 @@ module.exports = {
       "sidebarBG":"#584fd8",
       "headerBG":"#ffb6a7"
     },
-    extend: {},
+    extend: {
+      height: {
+        '300': '300px',
+      },
+      width: {
+        '300': '300px',
+      },
+    },
   },
   plugins: [],
 }
