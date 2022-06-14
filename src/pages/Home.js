@@ -27,7 +27,6 @@ export default function Home(){
 
 
     const getMore = () => {
-        console.log("hellpo")
         axios.get('https://picsum.photos/v2/list?page='+{page}+'&limit=60')
             .then(function (response) {
                 let tempData=[...imageList]
@@ -40,16 +39,17 @@ export default function Home(){
 
 
     return (
-      <div className="w-full h-full bg-white overflow-y-scroll rounded-br py-3">
+      <div id="scrollableDiv" className="w-full h-full bg-white overflow-scroll rounded-br py-3">
           {
               serverError===true?<span>server is not response</span>:
               imageList.length===0? <div className="flex justify-center"><CircularProgress size={30}/></div> :
                   <InfiniteScroll className="h-auto flex flex-row flex-wrap justify-around pb-20"
-                  dataLength={imageList.length}
-                                                                       next={()=>getMore}
+                  dataLength={Number(imageList.length)}
+                                                                       next={getMore}
                                                                        hasMore={hasMore}
-                                                                       loader={<div>hfghfgh</div>}
-                                                                       endMessage={<p>the end</p>}>
+                                                                       loader={<div className="w-full"><CircularProgress size={20}/></div>}
+                                                                       endMessage={<p>the end</p>}
+                                  scrollableTarget="scrollableDiv">
                   {imageList.map((item, index) => <ImageCard image={item.download_url} alt={item.id} title={item.author}
                                                              key={index}/>)}
               </InfiniteScroll>
