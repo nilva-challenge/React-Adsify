@@ -18,10 +18,10 @@ function App() {
               <Sidebar showsidebar={showHeader}/>
               <div className="w-full h-full flex flex-col justify-between overflow-hidden">
                   <Header showing={showHeader} active={changeShowSidebarHandler}/>
-                      <Switch>
+                   <Switch>
                           <Route exact path="/" component={Home}/>
                           <Route exact path="/detail" component={Detail}/>
-                      </Switch>
+                          </Switch>
               </div>
           </div>
       </div>

@@ -18,7 +18,8 @@ export default function Detail(){
     },[])
     return(
         <div className="bg-white w-full h-full">
-            { serverError===true?<span>server is not response</span>:<div>count{detailCounter}</div>}
+           <source src="http://www.clipstill.com/wp-content/uploads/000055_swan_thumb.mp4" type="video/mp4" className="w-20 h-20"/>
+            <div>count{detailCounter}</div>
         </div>
     );
 }

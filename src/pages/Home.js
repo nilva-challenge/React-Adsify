@@ -45,8 +45,8 @@ export default function Home(){
               serverError===true?<span>server is not response</span>:
               imageList.length===0? <div className="flex justify-center"><CircularProgress size={30}/></div> :
                   <InfiniteScroll className="h-auto flex flex-row flex-wrap justify-around pb-20"
-                                                                       dataLength={imageList.length}
-                                                                       next={getMore}
+                  dataLength={imageList.length}
+                                                                       next={()=>getMore}
                                                                        hasMore={hasMore}
                                                                        loader={<div>hfghfgh</div>}
                                                                        endMessage={<p>the end</p>}>
