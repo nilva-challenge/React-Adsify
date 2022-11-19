@@ -20,12 +20,25 @@ const initialState = {
 const cardListSlice = createSlice({
   name: "cardListSlice",
   initialState,
-  reducers: {},
+  reducers: {
+    next: (state) => {
+      state.transformX >= 620
+        ? (state.transformX = 0)
+        : (state.transformX += 60);
+    },
+    prev: (state) => {
+      state.transformX <= 0
+        ? (state.transformX = 620)
+        : (state.transformX -= 60);
+    },
+  },
   extraReducers: {
-    [cardList.fulfilled] : (state, action) => {
+    [cardList.fulfilled]: (state, action) => {
       state.data = action.payload;
-    }
-  }
+    },
+  },
 });
+
+export const { next, prev } = cardListSlice.actions;
 
 export default cardListSlice.reducer;

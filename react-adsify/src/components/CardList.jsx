@@ -4,15 +4,14 @@ import { cardList } from "../features/cardList/cardListSlice";
 
 import Card from "./Card";
 
-const CardList = ({ ...props }) => {
+const CardList = () => {
   const dispatch = useDispatch();
   const dataList = useSelector((store) => store.cardList.data);
   const {transformX} = useSelector((store) => store.cardList);
 
   useEffect(() => {
     dispatch(cardList());
-    console.log(dataList);
-  }, []);
+  }, [transformX]);
 
   return (
     <>
