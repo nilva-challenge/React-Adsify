@@ -1,12 +1,26 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CardDetail from "./pages/CardDetail";
+import { useEffect } from "react";
 
 function App() {
+  const { status } = useSelector((store) => store.mode);
+  useEffect(() => {
+    console.log(status);
+    if (!status) {
+      document.body.classList.add("bg-black");
+      document.body.classList.add("text-white");
+    } else {
+      document.body.classList.remove("bg-black");
+      document.body.classList.remove("text-white");
+    }
+  }, [status]);
+
   return (
     <Router>
       <Header />

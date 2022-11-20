@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { dark, light } from "../features/mode/modeSlice";
 
 const Header = () => {
-  const {count} = useSelector(store => store.tracker);
+  const { count } = useSelector((store) => store.tracker);
+
+  const dispatch = useDispatch();
+
   return (
     <header className="bg-red-300 relative">
       <div className="text-right text-gray-800 py-6 px-6">
@@ -11,7 +15,12 @@ const Header = () => {
         </h1>
         <h3 className="text-3xl text-white font-bold mb-8">
           All{" "}
-          <button className="text-yellow-300 hover:text-sky-400">
+          <button
+            className="text-yellow-300 hover:text-sky-400"
+            onClick={() => {
+              dispatch(light());
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -28,7 +37,12 @@ const Header = () => {
             </svg>
           </button>{" "}
           and all{" "}
-          <button className="text-cyan-600 hover:text-sky-700">
+          <button
+            className="text-cyan-600 hover:text-sky-700"
+            onClick={() => {
+              dispatch(dark());
+            }}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
