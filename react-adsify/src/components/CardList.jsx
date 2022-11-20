@@ -10,6 +10,7 @@ const CardList = () => {
   const {transformX} = useSelector((store) => store.cardList);
 
   useEffect(() => {
+    //load cardList
     dispatch(cardList());
   }, [transformX]);
 
