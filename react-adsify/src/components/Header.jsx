@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const {count} = useSelector(store => store.tracker);
   return (
     <header className="bg-red-300 relative">
       <div className="text-right text-gray-800 py-6 px-6">
@@ -45,7 +46,7 @@ const Header = () => {
           </button>
         </h3>
       </div>
-      <div className="text-white m-4 p-4">Your Views 0</div>
+      <div className="text-white m-4 p-4">Your Views {count}</div>
     </header>
   );
 };

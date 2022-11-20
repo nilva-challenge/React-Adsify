@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { cardDetail } from "../features/cardDetail/cardDetailSlice";
 import Loading from "../components/Loading";
+import { counter } from "../features/tracker/trackerSlice";
 
 const CardDetail = () => {
   const params = useParams();
@@ -11,6 +12,7 @@ const CardDetail = () => {
 
   useEffect(() => {
     dispatch(cardDetail(params.id));
+    dispatch(counter());
   }, []);
 
   return (
