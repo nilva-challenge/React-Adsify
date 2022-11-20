@@ -3,7 +3,7 @@ import axios from "axios";
 
 const url = "https://picsum.photos/v2/list?page=2&limit=100";
 
-export const cardList = createAsyncThunk("dashSlice/getList", async () => {
+export const cardList = createAsyncThunk("cardListSlice/cardList", async () => {
   try {
     const response = await axios(url);
     return response.data;

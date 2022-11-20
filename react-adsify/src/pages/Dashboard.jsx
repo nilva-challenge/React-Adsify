@@ -1,10 +1,10 @@
 import { lazy, Suspense } from "react";
 
-// import CardList from "../components/CardList";
 import CarouselController from "../components/CarouselController";
 import Loading from "../components/Loading";
 
 const CardListItems = lazy(() => import("../components/CardList"));
+const Player = lazy(() => import("../components/Player"));
 
 const Dashboard = () => {
   return (
@@ -12,6 +12,7 @@ const Dashboard = () => {
       <CarouselController />
       <Suspense fallback={<Loading />}>
         <CardListItems />
+        <Player />
       </Suspense>
     </div>
   );

@@ -1,13 +1,14 @@
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cardList } from "../features/cardList/cardListSlice";
+import Loading from "./Loading";
 
-import Card from "./Card";
+const Card = lazy(() => import("./Card"));
 
 const CardList = () => {
   const dispatch = useDispatch();
   const dataList = useSelector((store) => store.cardList.data);
-  const {transformX} = useSelector((store) => store.cardList);
+  const { transformX } = useSelector((store) => store.cardList);
 
   useEffect(() => {
     //load cardList
@@ -23,7 +24,11 @@ const CardList = () => {
         >
           <div className="carousel-item">
             {dataList.map((item) => {
-              return <Card key={item.id} {...item} />;
+              return (
+                <Suspense key={item.id} fallback={<Loading />}>
+                  <Card {...item} />
+                </Suspense>
+              );
             })}
           </div>
         </div>
