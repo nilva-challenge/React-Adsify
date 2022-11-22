@@ -11,7 +11,6 @@ import { useEffect } from "react";
 function App() {
   const { status } = useSelector((store) => store.mode);
   useEffect(() => {
-    console.log(status);
     if (!status) {
       document.body.classList.add("bg-black");
       document.body.classList.add("text-white");
