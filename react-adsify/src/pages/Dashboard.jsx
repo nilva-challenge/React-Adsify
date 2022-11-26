@@ -4,7 +4,7 @@ import CarouselController from "../components/CarouselController";
 import Loading from "../components/Loading";
 
 const CardListItems = lazy(() => import("../components/CardList"));
-const Player = lazy(() => import("../components/Player"));
+const Player = lazy(() => import("../components/Player/Player"));
 
 const Dashboard = () => {
   return (

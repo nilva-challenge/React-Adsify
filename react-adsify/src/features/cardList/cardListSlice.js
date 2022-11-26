@@ -15,6 +15,7 @@ export const cardList = createAsyncThunk("cardListSlice/cardList", async () => {
 const initialState = {
   data: [],
   transformX: 0,
+  carouselLength: 620,
 };
 
 const cardListSlice = createSlice({
@@ -22,13 +23,13 @@ const cardListSlice = createSlice({
   initialState,
   reducers: {
     next: (state) => {
-      state.transformX >= 620
+      state.transformX >= state.carouselLength
         ? (state.transformX = 0)
         : (state.transformX += 60);
     },
     prev: (state) => {
       state.transformX <= 0
-        ? (state.transformX = 620)
+        ? (state.transformX = state.carouselLength)
         : (state.transformX -= 60);
     },
   },

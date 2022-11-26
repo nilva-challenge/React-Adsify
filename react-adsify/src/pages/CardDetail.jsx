@@ -4,6 +4,8 @@ import { useDispatch } from "react-redux";
 import Loading from "../components/Loading";
 import { counter } from "../features/tracker/trackerSlice";
 import axios from "axios";
+// PlayerIdController for set id for player info
+import { PlayerIdController } from "../features/player/playerSlice";
 
 const CardDetail = () => {
   const params = useParams();
@@ -22,7 +24,10 @@ const CardDetail = () => {
   };
 
   useEffect(() => {
+    //Tracker
     dispatch(counter());
+    //set id for show each banner clicked in player
+    dispatch(PlayerIdController(params.id))
 
     getApi()
       .then((data) => setInfo(data))

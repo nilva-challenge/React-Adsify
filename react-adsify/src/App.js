@@ -1,23 +1,19 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import CardDetail from "./pages/CardDetail";
-import { useEffect } from "react";
+import {darkMode , LightMode} from './components/Mode';
 
 function App() {
   const { status } = useSelector((store) => store.mode);
+
   useEffect(() => {
-    if (!status) {
-      document.body.classList.add("bg-black");
-      document.body.classList.add("text-white");
-    } else {
-      document.body.classList.remove("bg-black");
-      document.body.classList.remove("text-white");
-    }
+    status ? LightMode() : darkMode()
   }, [status]);
 
   return (
