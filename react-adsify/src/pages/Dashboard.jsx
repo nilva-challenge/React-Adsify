@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react";
 
-import CarouselController from "../components/CarouselController";
+import CarouselController from "../components/CarouselController/Carousel";
 import Loading from "../components/Loading";
 
 const CardListItems = lazy(() => import("../components/CardList"));
