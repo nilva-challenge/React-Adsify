@@ -29,6 +29,7 @@ export const {
   StatusHandler,
   ForwardHandler,
   BackwardHandler,
+  PauseHandler,
 } = playerSlice.actions;
 
 export default playerSlice.reducer;

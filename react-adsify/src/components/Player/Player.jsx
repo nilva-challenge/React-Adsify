@@ -3,12 +3,12 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 
 import {
-  ForwardBtn,
-  BackwardBtn,
-  PlayBtn,
-  CloseBtn,
-  PauseBtn,
-} from "./PlayerUIBtns";
+  ForwardPlayer,
+  BackwardPlayer,
+  PlayPlayer,
+  ClosePlayer,
+  PausePlayer,
+} from "./PlayerControllers";
 import Loading from "../Loading";
 
 const Player = () => {
@@ -45,12 +45,12 @@ const Player = () => {
           </div>
         </Suspense>
         <div className="control-buttons my-4 text-center col-span-7 absolute left-40">
-          {BackwardBtn()}
-          {playStatus ? PlayBtn() : PauseBtn()}
-          {ForwardBtn()}
+          {BackwardPlayer()}
+          {playStatus ? PlayPlayer() : PausePlayer()}
+          {ForwardPlayer()}
         </div>
         <hr className="w-80 mt-14 border-2" />
-        <div className="absolute right-0">{CloseBtn()}</div>
+        <div className="absolute right-0">{ClosePlayer()}</div>
       </div>
     </div>
   );
