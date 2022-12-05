@@ -5,6 +5,7 @@ import Loading from "../components/Loading";
 
 const CardListItems = lazy(() => import("../components/CardList"));
 const Player = lazy(() => import("../components/Player/Player"));
+const VideoList = lazy(() => import("../components/VideoList/VideoList"));
 
 const Dashboard = () => {
   return (
@@ -12,6 +13,7 @@ const Dashboard = () => {
       <CarouselController />
       <Suspense fallback={<Loading />}>
         <CardListItems />
+        <VideoList />
         <Player />
       </Suspense>
     </div>
