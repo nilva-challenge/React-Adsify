@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  status: true,
+  themStatus: true,
 };
 
 const modeSlice = createSlice({
@@ -9,10 +9,10 @@ const modeSlice = createSlice({
   initialState,
   reducers: {
     dark: (state) => {
-      state.status = false;
+      state.themStatus = false;
     },
     light: (state) => {
-      state.status = true;
+      state.themStatus = true;
     },
   },
 });

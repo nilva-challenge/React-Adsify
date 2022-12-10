@@ -10,11 +10,11 @@ import CardDetail from "./pages/CardDetail";
 import {darkMode , LightMode} from './components/Mode';
 
 function App() {
-  const { status } = useSelector((store) => store.mode);
+  const { themStatus } = useSelector((store) => store.mode);
 
   useEffect(() => {
-    status ? LightMode() : darkMode()
-  }, [status]);
+    themStatus ? LightMode() : darkMode()
+  }, [themStatus]);
 
   return (
     <Router>
