@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { next, prev } from "../../features/cardList/cardListSlice";
-import { LeftArrow, RightArrow } from "../UI/Icons";
+import { LeftArrow, RightArrow } from "../Icons/Icons";
 import Button from "../Button";
 
 const Carousel = () => {

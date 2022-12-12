@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import { dark, light } from "../../features/mode/modeSlice";
-import { MoonIcon, SunIcon } from "../UI/Icons";
+import { MoonIcon, SunIcon } from "../Icons/Icons";
 import Button from "../Button";
 
 
